@@ -32,15 +32,50 @@ const langToggle = document.getElementById("language-toggle");
 let currentLang = localStorage.getItem('language') || "en";
 
 function applyTranslations(lang) {
-  if (translations[lang]) {
-      document.getElementById("nav-title").textContent = translations[lang].title;
-      document.getElementById("welcome-text").textContent = translations[lang].welcome;
-      document.getElementById("intro-text").textContent = translations[lang].intro;
+    if (translations[lang]) {
+        //navigation bar
+        const titleEl = document.getElementById("nav-title");
+        const welcomeEl = document.getElementById("welcome-text");
+        const introEl = document.getElementById("intro-text");
+    
+        if (titleEl) titleEl.textContent = translations[lang].title;
+        if (welcomeEl) welcomeEl.textContent = translations[lang].welcome;
+        if (introEl) introEl.textContent = translations[lang].intro;
 
-      // update both buttons
-      document.querySelectorAll("#language-toggle, #language-toggle-mobile")
-          .forEach(btn => btn.textContent = translations[lang].languageButton);
-  }
+        //about me section
+        const titleAboutME = document.getElementById("about-title");
+        const AboutMEName = document.getElementById("about-name");
+        const AboutMEEmail = document.getElementById("about-email");
+        const AboutMEPhone = document.getElementById("about-phone");
+        const AboutMEBirthday = document.getElementById("about-birthday");
+        const AboutMEDriving = document.getElementById("about-driving");
+        const AboutMEDrivingCat = document.getElementById("about-driving-cat");
+        const AboutMEHome = document.getElementById("about-home");
+        const AboutMELanguages = document.getElementById("about-languages");
+        const AboutMELanguagesEnglish = document.getElementById("about-languages-english");
+        const AboutMELanguagesFrench = document.getElementById("about-languages-french");
+        const AboutMELanguagesUrdu = document.getElementById("about-languages-urdu");
+        const AboutMELanguagesIntroduction = document.getElementById("about-introduction");
+        const AboutMELanguagesIntroductionContent = document.getElementById("about-introduction-content");
+
+        if (titleAboutME) titleAboutME.textContent = translations[lang].aboutMeTitle;
+        if (AboutMEName) AboutMEName.textContent = translations[lang].aboutMeName;
+        if (AboutMEEmail) AboutMEEmail.textContent = translations[lang].aboutMeEmail;
+        if (AboutMEPhone) AboutMEPhone.textContent = translations[lang].aboutMePhone;
+        if (AboutMEBirthday) AboutMEBirthday.textContent = translations[lang].aboutMeBirthday;
+        if (AboutMEDriving) AboutMEDriving.textContent = translations[lang].aboutMeDriving;
+        if (AboutMEDrivingCat) AboutMEDrivingCat.textContent = translations[lang].aboutMeDrivingCat;
+        if (AboutMEHome) AboutMEHome.textContent = translations[lang].aboutMeHome;
+        if (AboutMELanguages) AboutMELanguages.textContent = translations[lang].aboutMeLanguages;
+        if (AboutMELanguagesEnglish) AboutMELanguagesEnglish.textContent = translations[lang].aboutMeLanguagesEnglish;
+        if (AboutMELanguagesFrench) AboutMELanguagesFrench.textContent = translations[lang].aboutMeLanguagesFrench;
+        if (AboutMELanguagesUrdu) AboutMELanguagesUrdu.textContent = translations[lang].aboutMeLanguagesUrdu;
+        if (AboutMELanguagesIntroduction) AboutMELanguagesIntroduction.textContent = translations[lang].aboutMeIntroduction;
+        if (AboutMELanguagesIntroductionContent) AboutMELanguagesIntroductionContent.textContent = translations[lang].aboutMeIntroductionContent;
+    
+        document.querySelectorAll("#language-toggle, #language-toggle-mobile")
+            .forEach(btn => btn.textContent = translations[lang].languageButton);
+    }
 }
 
 // Initialize with saved preferences
