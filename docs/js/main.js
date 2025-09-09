@@ -2,14 +2,17 @@
 const themeToggle = document.getElementById("theme-toggle");
 
 function setTheme(isDark) {
-    if (isDark) {
-        document.documentElement.classList.add('dark');
-        themeToggle.textContent = "☀️";
-    } else {
-        document.documentElement.classList.remove('dark');
-        themeToggle.textContent = "🌙";
-    }
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  const themeButtons = document.querySelectorAll("#theme-toggle, #theme-toggle-mobile");
+
+  if (isDark) {
+      document.documentElement.classList.add("dark");
+      themeButtons.forEach(btn => btn.textContent = "☀️");
+  } else {
+      document.documentElement.classList.remove("dark");
+      themeButtons.forEach(btn => btn.textContent = "🌙");
+  }
+
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 }
 
 // Initialize theme
@@ -24,29 +27,21 @@ if (savedTheme === 'dark') {
     setTheme(systemPrefersDark);
 }
 
-themeToggle.addEventListener("click", () => {
-    const isDark = !document.documentElement.classList.contains("dark");
-    setTheme(isDark);
-});
-
 // Language Toggle
 const langToggle = document.getElementById("language-toggle");
 let currentLang = localStorage.getItem('language') || "en";
 
 function applyTranslations(lang) {
-    if (translations[lang]) {
-        document.getElementById("nav-title").textContent = translations[lang].title;
-        document.getElementById("welcome-text").textContent = translations[lang].welcome;
-        document.getElementById("intro-text").textContent = translations[lang].intro;
-        langToggle.textContent = translations[lang].languageButton;
-    }
-}
+  if (translations[lang]) {
+      document.getElementById("nav-title").textContent = translations[lang].title;
+      document.getElementById("welcome-text").textContent = translations[lang].welcome;
+      document.getElementById("intro-text").textContent = translations[lang].intro;
 
-langToggle.addEventListener("click", () => {
-    currentLang = currentLang === "en" ? "fr" : "en";
-    applyTranslations(currentLang);
-    localStorage.setItem('language', currentLang);
-});
+      // update both buttons
+      document.querySelectorAll("#language-toggle, #language-toggle-mobile")
+          .forEach(btn => btn.textContent = translations[lang].languageButton);
+  }
+}
 
 // Initialize with saved preferences
 applyTranslations(currentLang);
@@ -59,16 +54,37 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e =
     }
 });
 
-// Burger Menu Toggle
+// Drawer Elements
 const menuToggle = document.getElementById("menu-toggle");
-const mobileMenu = document.getElementById("mobile-menu");
+const mobileDrawer = document.getElementById("mobile-drawer");
+const drawerOverlay = document.getElementById("drawer-overlay");
+const closeDrawer = document.getElementById("close-drawer");
 
-menuToggle.addEventListener("click", () => {
-    if (mobileMenu.classList.contains("max-h-0")) {
-        mobileMenu.classList.remove("max-h-0");
-        mobileMenu.classList.add("max-h-40");
-    } else {
-        mobileMenu.classList.remove("max-h-40");
-        mobileMenu.classList.add("max-h-0");
-    }
-});
+function openDrawer() {
+    mobileDrawer.classList.remove("-translate-x-full");
+    drawerOverlay.classList.remove("hidden");
+    setTimeout(() => drawerOverlay.classList.add("opacity-50"), 10);
+}
+
+function closeDrawerMenu() {
+    mobileDrawer.classList.add("-translate-x-full");
+    drawerOverlay.classList.remove("opacity-50");
+    setTimeout(() => drawerOverlay.classList.add("hidden"), 300);
+}
+
+menuToggle.addEventListener("click", openDrawer);
+closeDrawer.addEventListener("click", closeDrawerMenu);
+drawerOverlay.addEventListener("click", closeDrawerMenu);
+
+document.querySelectorAll("#language-toggle, #language-toggle-mobile")
+    .forEach(btn => btn.addEventListener("click", () => {
+        currentLang = currentLang === "en" ? "fr" : "en";
+        applyTranslations(currentLang);
+        localStorage.setItem('language', currentLang);
+    }));
+
+document.querySelectorAll("#theme-toggle, #theme-toggle-mobile")
+    .forEach(btn => btn.addEventListener("click", () => {
+        const isDark = !document.documentElement.classList.contains("dark");
+        setTheme(isDark);
+    }));
