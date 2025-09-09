@@ -9,33 +9,48 @@
     <script src="./js/main.js" defer></script>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
-    <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow">
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <span id="nav-title" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            My CV
-          </span>
-        </a>
+  <nav class="bg-white border-gray-200 dark:bg-gray-900 shadow">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <span id="nav-title" class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          My CV
+        </span>
+      </a>
   
-        <div class="flex items-center space-x-4">
-          <!-- Language Toggle -->
-          <button id="language-toggle"
-            class="px-4 py-2 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-            English
-          </button>
+      <!-- Hamburger button (hidden on sm and above) -->
+      <button id="menu-toggle"
+        class="sm:hidden inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700"
+        aria-controls="mobile-menu" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <!-- Icon -->
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+          viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
   
-          <!-- Theme Toggle -->
-          <button id="theme-toggle"
-            class="px-4 py-2 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
-            🌙
-          </button>
-        </div>
+      <!-- Menu items (hidden on mobile by default) -->
+      <div id="mobile-menu"
+        class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out w-full sm:max-h-none sm:flex sm:w-auto sm:items-center sm:space-x-4">
+        
+        <button id="language-toggle"
+          class="block w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          English
+        </button>
+
+        <button id="theme-toggle"
+          class="block w-full sm:w-auto px-4 py-2 text-sm font-medium text-gray-900 dark:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700">
+          🌙
+        </button>
       </div>
-    </nav>
+    </div>
+  </nav>
   
-    <main class="max-w-screen-xl mx-auto p-4">
-      <h1 id="welcome-text" class="text-3xl font-bold mb-4">Welcome to my CV</h1>
-      <p id="intro-text" class="text-lg">This is a short introduction about me.</p>
-    </main>
+  <main class="max-w-screen-xl mx-auto p-4">
+    <h1 id="welcome-text" class="text-3xl font-bold mb-4">Welcome to my CV</h1>
+    <p id="intro-text" class="text-lg">This is a short introduction about me.</p>
+  </main>
 </body>
 </html>
