@@ -43,21 +43,24 @@ fetch("experience.html")
     const closeBtn = document.getElementById("close-modal");
 
     if (openBtn && modal && closeBtn) {
+      const overlay = modal.querySelector("div.fixed.inset-0.bg-black");
+
       openBtn.addEventListener("click", () => {
         modal.classList.remove("hidden");
         modal.classList.add("flex");
+        document.body.classList.add("modal-open");
       });
 
       closeBtn.addEventListener("click", () => {
         modal.classList.add("hidden");
         modal.classList.remove("flex");
+        document.body.classList.remove("modal-open");
       });
-
-      const overlay = modal.querySelector(".absolute.inset-0");
 
       overlay.addEventListener("click", () => {
         modal.classList.add("hidden");
         modal.classList.remove("flex");
+        document.body.classList.remove("modal-open");
       });
     }
   });
