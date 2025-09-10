@@ -18,6 +18,10 @@ const translations = {
       aboutMeLanguagesUrdu: "Urdu – Mother tongue",
       aboutMeIntroduction: "Introduction",
       aboutMeIntroductionContent: "Currently a Master’s student in Computer Systems Architecture, I have acquired solid skills throughout both my Master’s and Bachelor’s studies. Motivated, detail-oriented, and a strong team player, I am committed to contributing positively to a collaborative environment while meeting deadlines and delivering high-quality results.",
+      educationTitle: "Education",
+      masterTitle: "Master’s in Computer Systems Architecture",
+      bachelorTitle: "Bachelor’s in Computer Science, Application Development (with High Distinction)",
+      cessTitle: "CESS - General",
     },
     fr: {
       title: "Mon CV",
@@ -38,5 +42,9 @@ const translations = {
       aboutMeLanguagesUrdu: "Urdu - Langue maternelle",
       aboutMeIntroduction: "Introduction",
       aboutMeIntroductionContent: "Actuellement étudiant en Master en architecture des systèmes informatiques, j’ai acquis de solides compétences tout au long de mon parcours en Master et en Bachelier. Motivé, rigoureux et doté d’un bon esprit d’équipe, je m’engage à contribuer de manière positive à un environnement collaboratif, tout en respectant les délais et la qualité attendue.",
+      educationTitle: "Éducation",
+      masterTitle: "Master en Architecture des systèmes informatiques",
+      bachelorTitle: " Bachelier en informatique orientation developpement d'applications (Grande distinction)",
+      cessTitle: "CESS - Général",
     },
 };

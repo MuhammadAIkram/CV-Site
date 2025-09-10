@@ -73,8 +73,21 @@ function applyTranslations(lang) {
         if (AboutMELanguagesIntroduction) AboutMELanguagesIntroduction.textContent = translations[lang].aboutMeIntroduction;
         if (AboutMELanguagesIntroductionContent) AboutMELanguagesIntroductionContent.textContent = translations[lang].aboutMeIntroductionContent;
     
+        //education section
+        const titleEducation = document.getElementById("education-title");
+        const titleMaster = document.getElementById("master-title");
+        const titleBachelor = document.getElementById("bachelor-title");
+        const titleCESS = document.getElementById("cess-title");
+
+        if (titleEducation) titleEducation.textContent = translations[lang].educationTitle;
+        if (titleMaster) titleMaster.textContent = translations[lang].masterTitle;
+        if (titleBachelor) titleBachelor.textContent = translations[lang].bachelorTitle;
+        if (titleCESS) titleCESS.textContent = translations[lang].cessTitle;
+
         document.querySelectorAll("#language-toggle, #language-toggle-mobile")
             .forEach(btn => btn.textContent = translations[lang].languageButton);
+        
+        updateBirthdayWithAge();
     }
 }
 
@@ -123,3 +136,32 @@ document.querySelectorAll("#theme-toggle, #theme-toggle-mobile")
         const isDark = !document.documentElement.classList.contains("dark");
         setTheme(isDark);
     }));
+
+
+function calculateAge(birthdayStr) {
+    const [day, month, year] = birthdayStr.split("/").map(Number);
+    const birthDate = new Date(year, month - 1, day);
+    const today = new Date();
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const m = today.getMonth() - birthDate.getMonth();
+    
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    return age;
+}
+    
+function updateBirthdayWithAge() {
+    const birthdayEl = document.getElementById("birthday-text");
+    if (birthdayEl) {
+      const birthdayStr = birthdayEl.textContent.split("(")[0].trim();
+      const age = calculateAge(birthdayStr);
+  
+      if (currentLang === "en")
+        birthdayEl.textContent = `${birthdayStr} (${age} years old)`;
+      else
+        birthdayEl.textContent = `${birthdayStr} (${age} ans)`;
+    }
+}
