@@ -84,6 +84,27 @@ function applyTranslations(lang) {
         if (titleBachelor) titleBachelor.textContent = translations[lang].bachelorTitle;
         if (titleCESS) titleCESS.textContent = translations[lang].cessTitle;
 
+        //experience section
+        const titleExperience = document.getElementById("experience-title");
+        const titleCHBAExperience = document.getElementById("chba-title");
+        const titleCHBA2Experience = document.getElementById("chba-title2");
+        const dateCHBAExperience = document.getElementById("chba-date");
+        const CHBAMainTextExperience = document.getElementById("chba-main-text");
+        const CHBAMainTextList1Experience = document.getElementById("chba-main-text-list-1");
+        const CHBAMainTextList2Experience = document.getElementById("chba-main-text-list-2");
+        const CHBAMainTextList3Experience = document.getElementById("chba-main-text-list-3");
+        const usedToolsCHBAExperience = document.getElementById("used-tools");
+
+        if (titleExperience) titleExperience.textContent = translations[lang].experienceTitle;
+        if (titleCHBAExperience) titleCHBAExperience.textContent = translations[lang].chbaTitle;
+        if (titleCHBA2Experience) titleCHBA2Experience.textContent = translations[lang].chbaTitle;
+        if (dateCHBAExperience) dateCHBAExperience.textContent = translations[lang].chbaDate;
+        if (CHBAMainTextExperience) CHBAMainTextExperience.textContent = translations[lang].chbaMainText;
+        if (CHBAMainTextList1Experience) CHBAMainTextList1Experience.textContent = translations[lang].chbaMainTextList1;
+        if (CHBAMainTextList2Experience) CHBAMainTextList2Experience.textContent = translations[lang].chbaMainTextList2;
+        if (CHBAMainTextList3Experience) CHBAMainTextList3Experience.textContent = translations[lang].chbaMainTextList3;
+        if (usedToolsCHBAExperience) usedToolsCHBAExperience.textContent = translations[lang].chbaUsedTools;
+
         document.querySelectorAll("#language-toggle, #language-toggle-mobile")
             .forEach(btn => btn.textContent = translations[lang].languageButton);
         

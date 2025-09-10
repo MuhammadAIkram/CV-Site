@@ -22,6 +22,14 @@ const translations = {
       masterTitle: "Master’s in Computer Systems Architecture",
       bachelorTitle: "Bachelor’s in Computer Science, Application Development (with High Distinction)",
       cessTitle: "CESS - General",
+      experienceTitle: "Professional Experience",
+      chbaTitle: "Developer Analyst (Internship)",
+      chbaDate: "February 2024 - May 2024",
+      chbaMainText: "Analyzed and developed a new application for hospital porters to replace an outdated legacy tool still in use.",
+      chbaMainTextList1: "Modernized the existing application by rewriting it in a contemporary programming language.",
+      chbaMainTextList2: "Redesigned data management using a relational database.",
+      chbaMainTextList3: "Improved maintainability and overall efficiency of the tool.",
+      chbaUsedTools: "Used Tools"
     },
     fr: {
       title: "Mon CV",
@@ -46,5 +54,13 @@ const translations = {
       masterTitle: "Master en Architecture des systèmes informatiques",
       bachelorTitle: " Bachelier en informatique orientation developpement d'applications (Grande distinction)",
       cessTitle: "CESS - Général",
+      experienceTitle: "Expérience Professionnelle",
+      chbaTitle: "Analyste développeur (stage)",
+      chbaDate: "Février 2024 - Mai 2024",
+      chbaMainText: "Analyse et développement d’une nouvelle application pour les brancardiers, en remplacement d’un outil ancien encore utilisé par nécessité.",
+      chbaMainTextList1: "Reprise fonctionnelle de l'application existante dans un langage moderne",
+      chbaMainTextList2: "Refonte de la gestion des données avec une base de données relationnelle",
+      chbaMainTextList3: "Amélioration de la maintenabilité et de l’efficacité de l’outil",
+      chbaUsedTools: "Outils utilisés"
     },
 };
