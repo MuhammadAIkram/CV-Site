@@ -105,6 +105,28 @@ function applyTranslations(lang) {
         if (CHBAMainTextList3Experience) CHBAMainTextList3Experience.textContent = translations[lang].chbaMainTextList3;
         if (usedToolsCHBAExperience) usedToolsCHBAExperience.textContent = translations[lang].chbaUsedTools;
 
+        //projects section
+        const titleProjects = document.getElementById("projects-title");
+        const angularProject = document.getElementById("angular-Project");
+        const angularTextProject = document.getElementById("angular-Project-text");
+        const flutterProject = document.getElementById("flutter-Project");
+        const flutterTextProject = document.getElementById("flutter-Project-text");
+        const RTI_Project = document.getElementById("rti-Project");
+        const RTI_TextProject = document.getElementById("rti-Project-text");
+        const androidProject = document.getElementById("android-Project");
+        const androidTextProject = document.getElementById("android-Project-text");
+
+        if (titleProjects) titleProjects.textContent = translations[lang].projectsTitle;
+        if (angularProject) angularProject.textContent = translations[lang].angularProject;
+        if (angularTextProject) angularTextProject.textContent = translations[lang].angularTextProject;
+        if (flutterProject) flutterProject.textContent = translations[lang].flutterProject;
+        if (flutterTextProject) flutterTextProject.textContent = translations[lang].flutterTextProject;
+        if (RTI_Project) RTI_Project.textContent = translations[lang].RTI_Project;
+        if (RTI_TextProject) RTI_TextProject.textContent = translations[lang].RTI_TextProject;
+        if (androidProject) androidProject.textContent = translations[lang].androidProject;
+        if (androidTextProject) androidTextProject.textContent = translations[lang].androidTextProject;
+        
+
         //skills section
         const titleSkills = document.getElementById("skills-title");
         const subtitleSkills = document.getElementById("skills-subtitle");

@@ -84,3 +84,14 @@ fetch("skills.html")
     });
   });
   
+fetch("projects.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("projects").innerHTML = html;
+
+    // Re-apply translations AFTER education is loaded
+    if (typeof applyTranslations === "function") {
+      const lang = localStorage.getItem("language") || "en";
+      applyTranslations(lang);
+    }
+  });

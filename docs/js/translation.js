@@ -40,7 +40,16 @@ const translations = {
       gitTitle: "Git",
       networkingTitle: "Network Architectures",
       systemsTitle: "Operating Systems",
-      officeTitle: "Office Tools"
+      officeTitle: "Office Tools",
+      projectsTitle: "Projects",
+      angularProject: "Angular Project",
+      angularTextProject: "Angular project I did for a class called IoT2 in the first year of my master's degree where I built a webstore using Angular and integrating different elements from the projects of my teammates",
+      flutterProject: "Flutter project",
+      flutterTextProject: "Flutter project I did for a class in my third year of my bachelor's degree called HEPL Anime, where I made a application to monitor Anime using an API",
+      RTI_Project: "Huge Project in Java and various other languages",
+      RTI_TextProject: "A huge prject integrating multiple different programming languages for an important class in the third year of my bachelor's degree",
+      androidProject: "Android project",
+      androidTextProject: "Android project for a class in the third year of my bachelor's degree"
     },
     fr: {
       title: "Mon CV",
@@ -83,6 +92,15 @@ const translations = {
       gitTitle: "Git",
       networkingTitle: "Architectures réseau",
       systemsTitle: "Systèmes d'exploitation",
-      officeTitle: "Outils bureautiques"
+      officeTitle: "Outils bureautiques",
+      projectsTitle: "Projets",
+      angularProject: "Projet Angular",
+      angularTextProject: "Projet Angular réalisé pour un cours appelé IoT2 en première année de mon master où j'ai développé une boutique en ligne utilisant Angular et intégrant différents éléments des projets de mes coéquipiers",
+      flutterProject: "Projet Flutter",
+      flutterTextProject: "Projet Flutter réalisé pour un cours en troisième année de mon bachelier appelé HEPL Anime, où j'ai créé une application pour suivre les animés en utilisant une API",
+      RTI_Project: "Grand projet en Java et divers autres langages",
+      RTI_TextProject: "Un vaste projet intégrant de multiples langages de programmation différents pour un cours important en troisième année de mon bachelier",
+      androidProject: "Projet Android",
+      androidTextProject: "Projet Android pour un cours en troisième année de mon bachelier"
     },
 };
