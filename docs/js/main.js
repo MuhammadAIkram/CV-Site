@@ -105,6 +105,31 @@ function applyTranslations(lang) {
         if (CHBAMainTextList3Experience) CHBAMainTextList3Experience.textContent = translations[lang].chbaMainTextList3;
         if (usedToolsCHBAExperience) usedToolsCHBAExperience.textContent = translations[lang].chbaUsedTools;
 
+        //skills section
+        const titleSkills = document.getElementById("skills-title");
+        const subtitleSkills = document.getElementById("skills-subtitle");
+        const titleProgramming = document.getElementById("programming-title");
+        const titleFrameworks = document.getElementById("frameworks-title");
+        const titleWeb = document.getElementById("web-title");
+        const titleDatabses = document.getElementById("databases-title");
+        const titleDevops = document.getElementById("devops-title");
+        const titleGit = document.getElementById("git-title");
+        const titleNetworking = document.getElementById("networking-title");
+        const titleSystems = document.getElementById("systems-title");
+        const titleOffice = document.getElementById("office-title");
+
+        if (titleSkills) titleSkills.textContent = translations[lang].skillsTitle;
+        if (subtitleSkills) subtitleSkills.textContent = translations[lang].skillsSubTitle;
+        if (titleProgramming) titleProgramming.textContent = translations[lang].programmingTitle;
+        if (titleFrameworks) titleFrameworks.textContent = translations[lang].framworksTitle;
+        if (titleWeb) titleWeb.textContent = translations[lang].webTitle;
+        if (titleDatabses) titleDatabses.textContent = translations[lang].databsesTitle;
+        if (titleDevops) titleDevops.textContent = translations[lang].devopsTitle;
+        if (titleGit) titleGit.textContent = translations[lang].gitTitle;
+        if (titleNetworking) titleNetworking.textContent = translations[lang].networkingTitle;
+        if (titleSystems) titleSystems.textContent = translations[lang].systemsTitle;
+        if (titleOffice) titleOffice.textContent = translations[lang].officeTitle;
+
         document.querySelectorAll("#language-toggle, #language-toggle-mobile")
             .forEach(btn => btn.textContent = translations[lang].languageButton);
         

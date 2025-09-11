@@ -29,7 +29,18 @@ const translations = {
       chbaMainTextList1: "Modernized the existing application by rewriting it in a contemporary programming language.",
       chbaMainTextList2: "Redesigned data management using a relational database.",
       chbaMainTextList3: "Improved maintainability and overall efficiency of the tool.",
-      chbaUsedTools: "Used Tools"
+      chbaUsedTools: "Used Tools",
+      skillsTitle: "skills",
+      skillsSubTitle: "What I work with",
+      programmingTitle: "Programming Languages",
+      framworksTitle: "Frameworks & Environments",
+      webTitle: "Web Development",
+      databsesTitle: "Databases",
+      devopsTitle: "DevOps & Containerization",
+      gitTitle: "Git",
+      networkingTitle: "Network Architectures",
+      systemsTitle: "Operating Systems",
+      officeTitle: "Office Tools"
     },
     fr: {
       title: "Mon CV",
@@ -61,6 +72,17 @@ const translations = {
       chbaMainTextList1: "Reprise fonctionnelle de l'application existante dans un langage moderne",
       chbaMainTextList2: "Refonte de la gestion des données avec une base de données relationnelle",
       chbaMainTextList3: "Amélioration de la maintenabilité et de l’efficacité de l’outil",
-      chbaUsedTools: "Outils utilisés"
+      chbaUsedTools: "Outils utilisés",
+      skillsTitle: "Compétences",
+      skillsSubTitle: "Ce avec quoi je travaille",
+      programmingTitle: "Langages de programmation",
+      framworksTitle: "Frameworks et environnements",
+      webTitle: "Développement web",
+      databsesTitle: "Bases de données",
+      devopsTitle: "DevOps et conteneurisation",
+      gitTitle: "Git",
+      networkingTitle: "Architectures réseau",
+      systemsTitle: "Systèmes d'exploitation",
+      officeTitle: "Outils bureautiques"
     },
 };
