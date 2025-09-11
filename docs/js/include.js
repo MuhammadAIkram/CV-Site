@@ -65,3 +65,22 @@ fetch("experience.html")
     }
   });
 
+fetch("skills.html")
+  .then(res => res.text())
+  .then(html => {
+    document.getElementById("skills").innerHTML = html;
+
+    // Re-apply translations AFTER skills is loaded
+    if (typeof applyTranslations === "function") {
+      const lang = localStorage.getItem("language") || "en";
+      applyTranslations(lang);
+    }
+
+    document.querySelectorAll('#skills details').forEach(detail => {
+      detail.addEventListener('toggle', () => {
+        // This ensures transitions and open/close styles are applied
+        detail.classList.toggle('open', detail.open);
+      });
+    });
+  });
+  
