@@ -55,6 +55,9 @@ function applyTranslations(lang) {
         const AboutMELanguagesEnglish = document.getElementById("about-languages-english");
         const AboutMELanguagesFrench = document.getElementById("about-languages-french");
         const AboutMELanguagesUrdu = document.getElementById("about-languages-urdu");
+        const AboutMEHobbies = document.getElementById("about-hobbies");
+        const AboutMEHobbiesVideoGames = document.getElementById("about-hobbies-videogames");
+        const AboutMEHobbiesReading = document.getElementById("about-hobbies-reading");
         const AboutMELanguagesIntroduction = document.getElementById("about-introduction");
         const AboutMELanguagesIntroductionContent = document.getElementById("about-introduction-content");
 
@@ -70,6 +73,9 @@ function applyTranslations(lang) {
         if (AboutMELanguagesEnglish) AboutMELanguagesEnglish.textContent = translations[lang].aboutMeLanguagesEnglish;
         if (AboutMELanguagesFrench) AboutMELanguagesFrench.textContent = translations[lang].aboutMeLanguagesFrench;
         if (AboutMELanguagesUrdu) AboutMELanguagesUrdu.textContent = translations[lang].aboutMeLanguagesUrdu;
+        if (AboutMEHobbies) AboutMEHobbies.textContent = translations[lang].aboutMeHobbiesTitle;
+        if (AboutMEHobbiesVideoGames) AboutMEHobbiesVideoGames.textContent = translations[lang].aboutMeHobbiesVideoGames;
+        if (AboutMEHobbiesReading) AboutMEHobbiesReading.textContent = translations[lang].aboutMeHobbiesReading;
         if (AboutMELanguagesIntroduction) AboutMELanguagesIntroduction.textContent = translations[lang].aboutMeIntroduction;
         if (AboutMELanguagesIntroductionContent) AboutMELanguagesIntroductionContent.textContent = translations[lang].aboutMeIntroductionContent;
     
